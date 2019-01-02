@@ -9,7 +9,9 @@
 # production
 /build
 
-./idea
+/.idea
+/.vscode
+/.firebase
 
 # misc
 .DS_Store
