@@ -1,0 +1,12 @@
+.Logo {
+    background-image: linear-gradient(137deg, rgb(87, 225, 177), rgb(131, 140, 235));
+    padding: 8px;
+    height: 80%;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+.Logo img {
+    height: 100%;
+}

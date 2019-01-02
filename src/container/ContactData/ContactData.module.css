@@ -1,0 +1,19 @@
+.ContactData{
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.Text{
+    width: 200px;
+    padding: 8px;
+    margin-top: 8px;
+}
+.CustomForm{
+    /*padding-left : 400px;*/
+    /*padding-right : 400px;*/
+    /*text-align: center;*/
+    /*display:flex;*/
+    /*align-items: center;*/
+}

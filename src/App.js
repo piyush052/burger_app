@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+
+import Layout from './component/layout/Layout'
+import BurgerBuilder from './container/BUrgerBuilder/BurgerBuilder'
+import Checkout from "./container/checkout/Checkout";
+import {Route, Switch} from "react-router-dom";
+
+import Orders from '../src/container/Order/Orders'
+import ContactData from './container/ContactData/ContactData'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Layout>
+
+                <Switch>
+                    <Route path='/checkout/contact-data' exact component={ContactData}/>
+                    <Route path='/checkout' exact component={Checkout}/>
+                    <Route path='/orders' exact component={Orders}/>
+                    <Route path='/' exact component={BurgerBuilder}/>
+                </Switch>
+
+                {/*<BurgerBuilder>some thing is here </BurgerBuilder>*/}
+                {/*<Checkout/>*/}
+            </Layout>
+        );
+    }
 }
 
 export default App;
