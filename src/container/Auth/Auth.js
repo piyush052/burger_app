@@ -2,6 +2,7 @@ import React from 'react'
 
 import Input from '../../component/UI/Input/Input'
 import Button from '../../component/UI/Button/Button'
+import classes from './Auth.module.css'
 
 
 class Auth extends React.Component {
@@ -10,7 +11,7 @@ class Auth extends React.Component {
         email: {
             elementType: 'input',
             elementConfig: {
-                type: 'text',
+                type: 'email',
                 placeholder: 'Your Email'
             },
             value: ""
@@ -26,13 +27,40 @@ class Auth extends React.Component {
 
     };
 
+    changeHandler= (event,key)=>{
+
+
+
+        if(key==='email'){
+            let st= this.state.email;
+            st.value= event.target.value;
+            this.setState({
+                email: st
+            });
+        }else{
+            let st= this.state.password;
+            st.value= event.target.value;
+            this.setState({
+                password: st
+            });
+        }
+
+
+
+    };
+
+    authHandler= (event)=>{
+        event.preventDefault();
+
+    };
+
     render() {
         return (
-            <div>
-                <form>
-                    <Input inputtype={this.state.email}/>
-                    <Input inputtype={this.state.password}/>
-                    <Button type='submit'>Login</Button>
+            <div className={classes.Auth}>
+                <form onSubmit={()=>this.authHandler()}>
+                    <Input inputtype={this.state.email} change={(event)=>this.changeHandler(event, 'email')}/>
+                    <Input inputtype={this.state.password} change={(event)=>this.changeHandler(event, 'pwd')}/>
+                    <button className={classes.btn}   type='submit'>Login</button>
 
                 </form>
 

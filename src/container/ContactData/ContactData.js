@@ -131,7 +131,7 @@ class ContactData extends React.Component {
         return (
             <div className={classes.ContactData}>
                 {this.props.loader ? <ProgressBr/> : null}
-                <h4>
+                <h4 style={{marginLeft: 15}}>
                     Enter your data
                 </h4>
                 <div className={classes.CustomForm}>
@@ -143,7 +143,7 @@ class ContactData extends React.Component {
                             />))
 
                         }
-                        <Button type="submit">Order</Button>
+                        <button className={classes.btn}  type="submit">Order</button>
 
                     </form>
                 </div>

@@ -1,0 +1,25 @@
+.Auth{
+    margin: auto;
+    width: 30%;
+    border: 1px solid #a9a9a9;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: #7E7365;
+    background-color: white;
+    flex: content;
+
+}
+
+.btn {
+    display: block;
+    background-color: #039be5;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    width: 30%;
+    border: #039be5 solid 1px;
+    border-radius: 10px;
+    margin: 15px auto 13px;
+}
+
+
