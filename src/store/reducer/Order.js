@@ -1,6 +1,5 @@
 import * as order from '../action/Order';
 
-
 const initalState = {
     orderData: [],
     loader: false,

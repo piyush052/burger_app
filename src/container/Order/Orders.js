@@ -42,7 +42,7 @@ class Orders extends React.Component {
        // console.log(orders);
         return (
             <div>
-                {orders}
+                {orders.length==0 ?(<h1> No order found </h1>) : orders}
             </div>
         );
     }
