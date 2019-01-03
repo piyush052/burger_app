@@ -2,7 +2,7 @@
     margin: auto;
     width: 30%;
     border: 1px solid #a9a9a9;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     box-shadow: #7E7365;
     background-color: white;
@@ -16,9 +16,10 @@
     height: 40px;
     color: white;
     font-size: 16px;
+    cursor: pointer;
     width: 30%;
     border: #039be5 solid 1px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 15px auto 13px;
 }
 

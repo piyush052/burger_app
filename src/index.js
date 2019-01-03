@@ -13,12 +13,14 @@ import {BrowserRouter} from "react-router-dom";
 
 import burgerBuilder from './store/reducer/BurgerBuilder'
 import orderReducer from './store/reducer/Order'
+import authReducer from './store/reducer/Auth'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
     burgerBuilder : burgerBuilder,
-    order : orderReducer
+    order : orderReducer,
+    auth : authReducer
 });
 
 const store = createStore(rootReducer, /* preloadedState, */ composeEnhancers(applyMiddleware(thunk)));
