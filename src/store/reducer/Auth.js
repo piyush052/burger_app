@@ -2,7 +2,8 @@ import * as auth from '../action/Auth'
 
 const initialState = {
     start: false,
-    success: false
+    success: false,
+    authData : null
 };
 
 
@@ -11,17 +12,20 @@ const initialState = {
 
         case auth.AUTH_SATRT :
             return {
-                ...state,
+                authData:null,
+                success: false,
                 start: true
             };
         case auth.AUTH_SUCCESS :
             return {
-                ...state,
-                success: true
+                start:false,
+                success: true,
+                authData: action.value
             };
         case auth.AUTH_FAIL :
             return {
-                ...state,
+                authData:null,
+                start:false,
                 success: false
             };
 
