@@ -30,7 +30,7 @@ export const authStart = (email, password) => {
         dispatcher(authStartAction());
 
         // call the API
-        axios.post("https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyABowARG5mI-D-e439qOts6y4bVtvpMImE",
+        axios.post("https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?",
             {
                 email: email,
                 password:password,
