@@ -51,7 +51,7 @@ class Auth extends React.Component {
     authHandler = (event) => {
         event.preventDefault();
 
-        this.props.auth(this.state.email.value, this.state.password.value);
+        this.props.auth(this.state.email.value, this.state.password.value,this.state.isSignIn);
 
 
     };
@@ -93,8 +93,8 @@ const mapPropsToState = (state) => {
 
 const mapPropsToDispatch = (dispatch) => {
     return {
-        auth: (email, pwd) => {
-            dispatch(auth.authStart(email, pwd))
+        auth: (email, pwd, isSignIn) => {
+            dispatch(auth.authStart(email, pwd,isSignIn))
         }
     }
 };

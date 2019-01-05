@@ -11,7 +11,7 @@ const toolbar = (props) =>
     <header className={classes.Toolbar}>
         <Menu  click={props.menuClicked}>Menu</Menu>
         <Logo/>
-        <nav className={classes.DesktopOnly}> <NavigationItems/></nav>
+        <nav className={classes.DesktopOnly}> <NavigationItems isLogin={props.isLogin}/></nav>
     </header>
 
 );

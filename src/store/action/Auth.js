@@ -1,4 +1,5 @@
 import axios from 'axios'
+import * as Utils from '../../Utils'
 
 export const AUTH_SATRT = 'AUTH_SATRT';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
@@ -23,14 +24,22 @@ export const authFail = ()=>{
     }
 };
 
-export const authStart = (email, password) => {
+export const authStart = (email, password, isSignin) => {
 
     return (dispatcher) => {
 
         dispatcher(authStartAction());
 
+
+        let url ="";
+        if(isSignin){
+            url= "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key="+Utils.FIREBASE_KEY;
+        }else{
+            url = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key="+Utils.FIREBASE_KEY;
+        }
+
         // call the API
-        axios.post("https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyABowARG5mI-D-e439qOts6y4bVtvpMImE",
+        axios.post(url,
             {
                 email: email,
                 password:password,
