@@ -19,7 +19,7 @@ export const fetchOrderStart= ()=>{
 
 
     return (dispatcher)=> {
-        axios.get("/orders.json").then(responnse => {
+        axios.get("/orders.json").then(responnse => { // for token add '?auth= [token] which is in redux store
             //console.log(JSON.parse(JSON.stringify(responnse.data)));
             const fetchArr = [];
             for (let key in responnse.data) {
